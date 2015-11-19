@@ -1,3 +1,13 @@
 machine:
   node:
     version: 4.2
+
+dependencies:
+  post:
+    - npm install -g modulus
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - modulus deploy -p chronos
