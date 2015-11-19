@@ -1,0 +1,45 @@
+{
+  "name": "chronos",
+  "version": "1.0.0",
+  "description": "Scheduled jobs server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerGarlick/chronos.git"
+  },
+  "author": "Tyler Garlick <tjgarlick@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/chronos/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/chronos#readme",
+  "devDependencies": {
+    "code": "^2.0.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "bluebird": "^3.0.5",
+    "boom": "^3.0.0",
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "hapi": "^11.1.1",
+    "hapi-async-handler": "^1.0.3",
+    "hapi-router": "^3.4.0",
+    "hapi-swaggered": "^2.4.1",
+    "hapi-swaggered-ui": "^2.1.1",
+    "hoek": "^3.0.4",
+    "inert": "^3.2.0",
+    "joi": "^7.0.0",
+    "later": "^1.2.0",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "rethinkdbdash": "^2.2.1",
+    "tv": "^5.0.1",
+    "vision": "^4.0.1"
+  }
+}
