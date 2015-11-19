@@ -6,7 +6,7 @@ const Boom = require('boom');
 const Registrations = require('../specs/registrations');
 
 module.exports = {
-  path: '/v1/registrations',
+  path: '/v1/jobs',
   method: 'GET',
   config: {
     tags: ['api'],
@@ -18,11 +18,13 @@ module.exports = {
 
     handler: {
       async: Promise.coroutine(function *(request, reply) {
-
-        const r = request.server.plugins.db.r;
-
-        let results = yield r.table('registrations').run();
-        return reply(results);
+        const db = request.server.plugins.db.current;
+        try {
+          let registrations = yield Promise.promisifyAll(db.collection('jobs')).findAsync();
+          return reply(registrations);
+        } catch (e) {
+          return reply(e);
+        }
       })
     }
   }

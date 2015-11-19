@@ -38,8 +38,11 @@
     "later": "^1.2.0",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
-    "rethinkdbdash": "^2.2.1",
+    "mongojs": "^1.4.1",
     "tv": "^5.0.1",
     "vision": "^4.0.1"
+  },
+  "engines": {
+    "node": "4.2.x"
   }
 }

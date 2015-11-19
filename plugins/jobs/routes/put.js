@@ -2,23 +2,25 @@
 
 const Promise = require('bluebird');
 
-const Registration = require('../specs/registration');
-
 module.exports = {
-  path: '/v1/registrations/{id}',
-  method: 'GET',
+  path: '/v1/jobs/{id}',
+  method: 'PUT',
   config: {
     tags: ['api'],
-    description: 'Registration Details',
+    description: 'Update a registration',
 
-     response: {
-      schema: Registration
-     },
+    // validate: {
+    //   payload: { }
+    // },
+
+    // response: {
+    //  schema:
+    // },
 
     handler: {
       async: Promise.coroutine(function* (request, reply) {
         try {
-          return reply({});
+          return reply([]);
         } catch (e) {
           return reply(e);
         }

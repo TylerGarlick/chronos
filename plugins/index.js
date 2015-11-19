@@ -1,7 +1,6 @@
 'use strict';
 
 const Hapi = require('hapi');
-const Promise = require('bluebird');
 const server = new Hapi.Server();
 server.connection({ port: process.env.PORT || 3000 });
 
@@ -55,13 +54,8 @@ server.register([
       swaggerOptions: { docExpansion: 'list' }
     }
   },
-  {
-    register: require('./db'),
-    options: {
-      db: 'chronos'
-    }
-  },
-  require('./registrations')
+  require('./jobs'),
+  require('./db')
 ], err => {
   if (err) throw err;
 
